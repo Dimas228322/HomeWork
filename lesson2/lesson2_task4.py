@@ -31,8 +31,7 @@ print(ProductsR[0:6])
 
 
 
-    #cena = lst3[0]
-    #cena2 = lst3[1]
+
 
 
 
