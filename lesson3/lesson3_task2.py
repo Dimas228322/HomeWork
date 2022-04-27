@@ -5,7 +5,17 @@
 # Вернуть словарь с ключами, отсортированными в алфавитном порядке.
 # Выполнить вызов функции для списка имен и вывести на экран словарь.
 # Вы можете вывести на экран «красиво» - как в примере на каждой строке одна буква и список, но это не обязательно.
-humans = input('Напишите имя сотрудника: ')
-names = {}
-if humans in names:
-    print('yeees')
+humans = "Иван", "Мария", "Петр", "Илья", "Артем", "Вадим", "Анатолий"
+def thesaurus(humans):
+    names = {}
+    for allnames in humans:
+        key = allnames[0]
+        if key in names:
+            names[key].append(allnames)
+        if allnames[0] not in names:
+            names[allnames[0]]=[allnames]
+    listk = list(names.keys())
+    listk.sort()
+    for i in listk:
+        print(i,':',names[i])
+thesaurus(humans)
