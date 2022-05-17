@@ -17,7 +17,7 @@ def repars1(allnames):
         n1 = fullnames[5].split('"')
         request_type = n1[1]
         requested_resource = fullnames[6]
-        list1 = [remote_addr,request_type,requested_resource]
+        list1 = remote_addr,request_type,requested_resource
         allnames.append(list1)
     yield allnames
 gen1 = repars1(allnames)
