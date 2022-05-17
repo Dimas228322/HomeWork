@@ -14,3 +14,22 @@
 #Не используйте в этом задании функции zip и zip_longest.
 #Не меняйте исходные списки tutors и groups и не создавайте новых списков.
 #Подтвердите работоспособность(выведите в консоль результаты) для обоих вариантов: groups меньше tutors и tutors меньше groups.
+tutors = ['Иван', 'Анастасия', 'Петр', 'Сергей','Дмитрий', 'Борис', 'Елена','Яна','Павел']
+groups = ['9А', '7В', '9Б', '9В', '8Б', '10А', '10Б']
+def genschool(tutors,groups):
+    n = -1
+    n2 = -1
+    for i in tutors:
+        n = n + 1
+        n2 = n2 + 1
+        if n < len(groups):
+            yield tutors[n],groups[n2]
+        else:
+            n >= len(groups)
+            yield tutors[n], None
+print(genschool(tutors,groups))
+gen1 = genschool(tutors,groups)
+for i1 in gen1:
+    print(i1)
+#Работает как надо вроде, но у меня до сих пор чувство будто я делаю по старому всё, а остальные в одну строку уже всё это пишут :(
+
