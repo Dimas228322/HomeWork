@@ -14,7 +14,6 @@ file1 = open('task6_3_rezult.txt', mode='wt', encoding='utf-8')
 users = content.read()
 hobby = content1.read()
 users1 = users.split()
-print(users1)
 hobby1 = hobby.replace(",", ";")
 hobby2 = hobby1.split('\n')
 all = {}
