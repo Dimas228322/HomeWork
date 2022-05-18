@@ -8,6 +8,30 @@
 # Разделитель между значениями — запятая. Не используем пакеты для парсинга CSV файлов. При формировании словаря - хобби следует разделить символом «точка с запятой».
 # Если в файле, хранящем данные о хобби, меньше записей, чем в файле с ФИО, то для оставшихся ФИО использовать вместо хобби None.
 # Если наоборот — формируем словарь, исходя из количества ФИО и выходим из скрипта с кодом «1».
-users = open('task6_3users.cvs','r',encoding='utf-8')
-hobby = open('task6_3_hobby.csv','r',encoding='utf-8')
-print(users)
+content = open('task6_3_users.csv','r',encoding='utf-8')
+content1 = open('task6_3_hobby.csv','r',encoding='utf-8')
+file1 = open('task6_3_rezult.txt', mode='wt', encoding='utf-8')
+users = content.read()
+hobby = content1.read()
+users1 = users.split()
+hobby1 = hobby.replace(",", ";")
+hobby2 = hobby1.split('\n')
+all = {}
+n = 0
+for key in users1:
+    keyn = key[0][0]
+    keyn2 = keyn + keyn + keyn
+    if n < len(hobby2):
+        all[keyn2] = hobby2[n]
+        n = n + 1
+    elif n >= len(hobby2):
+        all[keyn2] = None
+print(all)
+file1.write(str(all))
+file1.close()
+
+
+
+
+
+
