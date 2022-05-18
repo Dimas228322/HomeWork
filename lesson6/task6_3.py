@@ -14,13 +14,14 @@ file1 = open('task6_3_rezult.txt', mode='wt', encoding='utf-8')
 users = content.read()
 hobby = content1.read()
 users1 = users.split()
+print(users1)
 hobby1 = hobby.replace(",", ";")
 hobby2 = hobby1.split('\n')
 all = {}
 n = 0
 for key in users1:
-    keyn = key[0][0]
-    keyn2 = keyn + keyn + keyn
+    keyn = key.split(',')
+    keyn2 = keyn[0][0] + keyn[1][0] + keyn[2][0]
     if n < len(hobby2):
         all[keyn2] = hobby2[n]
         n = n + 1
