@@ -13,7 +13,7 @@
 #чтобы легко расширить количество создаваемых папок, например до 100 папок.
 import os.path
 from os import makedirs
-from os.path import exists, join
+from os.path import join
 task7 = "task_1"
 dir_name = "my_project"
 all_dirs = ["settings", "mainapp", "adminapp", "authapp"]
