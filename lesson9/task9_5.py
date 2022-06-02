@@ -8,25 +8,25 @@
 #Подумайте о том, имеет ли смысл при переопределении draw использовать draw базового класса.
 #создать экземпляры классов и проверить, что выведет описанный метод для каждого экземпляра.
 class Stationery:
-    def draw(title):
+    def draw(*title):
         return ('Запуск отрисовки')
 
 
 class Pen(Stationery):
-    def draw(title):
+    def draw(*title):
         return ('Пишу ручкой')
 class Pencil(Stationery):
-    def draw(title):
+    def draw(*title):
         return ('Пишу карандашом')
 class Handle(Stationery):
-    def draw(title):
+    def draw(*title):
         return ('Пишу маркером')
 
-pen = Stationery.draw(2)
+pen = Stationery.draw()
 print(pen)
-pen1 = Pen.draw(2)
+pen1 = Pen.draw()
 print(pen1)
-pen2 = Pencil.draw(2)
+pen2 = Pencil.draw()
 print(pen2)
-pen3 = Handle.draw(2)
+pen3 = Handle.draw()
 print(pen3)
